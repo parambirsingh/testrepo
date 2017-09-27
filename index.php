@@ -4,9 +4,12 @@ if (@isset($_GET['source']))
 	highlight_string(file_get_contents('index.php'));
 	exit();
 	}
+
 ?>
+
 Core Xii's frequent word sequence finder<br />
-<br />
+
+
 <?php
 if ($_GET['file'])
 	{
