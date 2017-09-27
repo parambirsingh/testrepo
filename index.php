@@ -9,9 +9,8 @@ if (@isset($_GET['source']))
 
 Core Xii's frequent word sequence finder<br />
 
-
 <?php
-if ($_GET['file'])
+if (isset($_GET['file']) && $_GET['file'] != '')
 	{
 	if (preg_match("(\\W)", $_GET['file'])) die('Directory traversal not permitted.');
 	if (!$file = @file_get_contents($_GET['file'].'.txt')) die('Nonexistant or empty file.');
