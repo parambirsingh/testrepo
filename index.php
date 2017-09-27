@@ -11,10 +11,10 @@ Core Xii's frequent word sequence finder<br />
 
 <?php
 if (isset($_GET['file']) && $_GET['file'] != '')
-	{
+	{	
 	if (preg_match("(\\W)", $_GET['file'])) die('Directory traversal not permitted.');
 	if (!$file = @file_get_contents($_GET['file'].'.txt')) die('Nonexistant or empty file.');
-	if ($_GET['minfreq'])
+	if (isset($_GET['minfreq']))
 		{
 		if (!@preg_match("(\A[1-9][0-9]*\Z)", $_GET['minfreq'])) die('Invalid minimum frequency. Must be an integer >= 1.');
 		else $minfreq = (int) $_GET['minfreq'];
