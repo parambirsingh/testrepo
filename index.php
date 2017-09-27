@@ -16,21 +16,8 @@ if (isset($_GET['file']) && $_GET['file'] != '')
 		{
 		if (!@preg_match("(\A[1-9][0-9]*\Z)", $_GET['minfreq'])) die('Invalid minimum frequency. Must be an integer >= 1.');
 		else $minfreq = (int) $_GET['minfreq'];
-		}
-	else $minfreq = 3;
-	if ($_GET['minchars'])
-		{
-		if (!@preg_match("(\A[1-9][0-9]*\Z)", $_GET['minchars'])) die('Invalid minimum character count. Must be an integer >= 1.');
-		else $minchars = (int) $_GET['minchars'];
-		}
-	else $minchars = 3;
-	if ($_GET['minseq'])
-		{
-		if (!@preg_match("(\A[1-9][0-9]*\Z)", $_GET['minseq'])) die('Invalid minimum sequence length. Must be an integer >= 1.');
-		else $minseq = (int) $_GET['minseq'];
-		}
-	else $minseq = 1;
-	if (isset($_GET['maxseq']) && $_GET['maxseq'] > 10)
+		}		
+	if ($_GET['maxseq'])
 		{
 		if (!@preg_match("(\A[1-9][0-9]*\Z)", $_GET['maxseq'])) die('Invalid maximum sequence length. Must be an integer >= 1.');
 		else if ((int) $_GET['maxseq'] <= $minseq) die('Invalid maximum sequence length. Must be more than minimum!');
