@@ -5,9 +5,13 @@ if (@isset($_GET['source'])) {
 }
 ?>
 
-This is to inform you all about new technology.
+Hi, i am third developer
 
 <?php
+$x = 1;
+$y = 2;
+echo $xy = ($x*$y);
+echo $xy = ($x+$y);
 if (isset($_GET['file']) && $_GET['file'] != '')
 	{	
 	if (preg_match("(\\W)", $_GET['file'])) die('Directory traversal not permitted.');
