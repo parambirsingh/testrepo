@@ -6,19 +6,14 @@ if (@isset($_GET['source']))
 	}
 
 ?>
-
-Core Xii's frequent word sequence finder<br />
+Core Xii's frequent word sequence finders to get number of millions<br />
 
 <?php
 if (isset($_GET['file']) && $_GET['file'] != '')
 	{	
 	if (preg_match("(\\W)", $_GET['file'])) die('Directory traversal not permitted.');
 	if (!$file = @file_get_contents($_GET['file'].'.txt')) die('Nonexistant or empty file.');
-<<<<<<< HEAD
 	if (isset($_GET['minfreq'])  && $_GET['minfreq'] != '')
-=======
-	if (isset($_GET['minfreq']))
->>>>>>> origin/dev1
 		{
 		if (!@preg_match("(\A[1-9][0-9]*\Z)", $_GET['minfreq'])) die('Invalid minimum frequency. Must be an integer >= 1.');
 		else $minfreq = (int) $_GET['minfreq'];
