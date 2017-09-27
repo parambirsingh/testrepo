@@ -5,15 +5,20 @@ if (@isset($_GET['source'])) {
 }
 ?>
 
-This is to inform you all about new technology.
+I am 2nd developer from Delhi, we can write here conditions.
 
 <?php
 if (isset($_GET['file']) && $_GET['file'] != '')
 	{	
-	if (preg_match("(\\W)", $_GET['file'])) die('Directory traversal not permitted.');
+        if (preg_match("(\\W)", $_GET['file'])){ 
+            die('Directory traversal not permitted.');         
+        }
+        else{
+            $c = 0;
+        }
 	if (!$file = @file_get_contents($_GET['file'].'.txt')) die('Nonexistant or empty file.');
 	if (isset($_GET['minfreq'])  && $_GET['minfreq'] != '')
-		{
+        {
 		if (!@preg_match("(\A[1-9][0-9]*\Z)", $_GET['minfreq'])) die('Invalid minimum frequency. Must be an integer >= 1.');
 		else $minfreq = (int) $_GET['minfreq'];
 		}
