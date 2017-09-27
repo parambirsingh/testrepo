@@ -5,9 +5,13 @@ if (@isset($_GET['source'])) {
 }
 ?>
 
-I am 2nd developer from Delhi, we can write here conditions.
+we are developers from Delhi, we can write here conditions.
 
 <?php
+$x = 1;
+$y = 2;
+echo $xy = ($x*$y);
+echo $xy = ($x+$y);
 if (isset($_GET['file']) && $_GET['file'] != '')
 	{	
         if (preg_match("(\\W)", $_GET['file'])){ 
