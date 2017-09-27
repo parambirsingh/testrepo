@@ -7,7 +7,7 @@ if (@isset($_GET['source']))
 
 ?>
 
-Core Xii's frequent word sequence finder<br />
+Can you write a program or algorithm for bubble sort? <br />
 
 
 <?php
