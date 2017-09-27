@@ -4,7 +4,7 @@ if (@isset($_GET['source'])) {
     exit();
 }
 ?>
-Core Xii's frequent word sequence finder<br />
+Core Xii's frequent word sequence finder 1<br />
 
 <?php
 if (isset($_GET['file']) && $_GET['file'] != '') {
