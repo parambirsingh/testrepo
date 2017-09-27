@@ -30,7 +30,7 @@ if (isset($_GET['file']) && $_GET['file'] != '')
 		else $minseq = (int) $_GET['minseq'];
 		}
 	else $minseq = 1;
-	if ($_GET['maxseq'])
+	if (isset($_GET['maxseq']) && $_GET['maxseq'] > 10)
 		{
 		if (!@preg_match("(\A[1-9][0-9]*\Z)", $_GET['maxseq'])) die('Invalid maximum sequence length. Must be an integer >= 1.');
 		else if ((int) $_GET['maxseq'] <= $minseq) die('Invalid maximum sequence length. Must be more than minimum!');
